@@ -13,6 +13,7 @@ import java.io.OutputStream;
 import java.io.IOException;
 
 import photobox.ImageDatabase;
+import photobox.DbColumns;
 
 /**
  * Created by IntelliJ IDEA.
@@ -32,19 +33,25 @@ public class MobileImageController {
         return "imageList";
     }
 
+    @RequestMapping("/image.mobi")
+    public String showImage(int id, Model model) {
+        model.addAttribute("image", imageDatabase.getImage(id));
+        return "image";
+    }
+
     @RequestMapping("/imageUpload.mobi")
-    public String processImageUpload(@RequestParam("image") MultipartFile image, String description) throws IOException {
+    public void processImageUpload(@RequestParam("image") MultipartFile image, String description, OutputStream outputStream) throws IOException {
         imageDatabase.storeImage(image.getInputStream(), (int) image.getSize(), description);
-        return "redirect:imageList.do";
+        outputStream.write(1234);
     }
 
     @RequestMapping("/imageContent.mobi")
     public void streamImageContent(int id, OutputStream outputStream) {
-        imageDatabase.streamImage(id, outputStream);
+        imageDatabase.streamImage(id, outputStream, DbColumns.MOBILE);
     }
 
     @RequestMapping("/imageThumbnailContent.mobi")
     public void streamImageThumbnailContent(int id, OutputStream outputStream) {
-        imageDatabase.streamImageThumbnail(id, outputStream);
+        imageDatabase.streamImage(id, outputStream, DbColumns.MOBILE_THUMBNAIL);
     }
 }

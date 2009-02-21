@@ -44,12 +44,12 @@ public class ImageController {
 
     @RequestMapping("/imageContent.do")
     public void streamImageContent(int id, OutputStream outputStream) {
-        imageDatabase.streamImage(id, outputStream);
+        imageDatabase.streamImage(id, outputStream, DbColumns.DESKTOP);
     }
 
     @RequestMapping("/imageThumbnailContent.do")
     public void streamImageThumbnailContent(int id, OutputStream outputStream) {
-        imageDatabase.streamImageThumbnail(id, outputStream);
+        imageDatabase.streamImage(id, outputStream, DbColumns.DESKTOP_THUMBNAIL);
     }
 
     @RequestMapping("/clearDatabase.do")

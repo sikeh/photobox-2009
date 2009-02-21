@@ -7,8 +7,6 @@ import org.springframework.jdbc.core.support.AbstractLobStreamingResultSetExtrac
 import org.springframework.jdbc.support.lob.LobHandler;
 import org.springframework.jdbc.support.lob.LobCreator;
 import org.springframework.jdbc.LobRetrievalFailureException;
-import org.springframework.stereotype.Service;
-import org.springframework.stereotype.Component;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.util.FileCopyUtils;
@@ -70,39 +68,20 @@ public class DefaultImageDatabase extends SimpleJdbcDaoSupport implements ImageD
 
     @Override
     @Transactional(readOnly = true)
-    public void streamImage(final int id, final OutputStream outputStream) {
+    public void streamImage(final int id, final OutputStream outputStream, DbColumns dbColumn) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("select ");
+        sb.append(dbColumn.getColumnName());
+        sb.append(" from image where id = ?");
         getJdbcTemplate().query(
-                "select content_desktop from image where id = ?",
+//                "select  from image where id = ?",
+                sb.toString(),
                 new Object[]{id},
                 new AbstractLobStreamingResultSetExtractor() {
                     @Override
                     protected void handleNoRowFound() throws LobRetrievalFailureException {
                         throw new EmptyResultDataAccessException(
-                                "Desktop image with id '" + id + "' not found in database", 1);
-                    }
-
-                    @Override
-                    public void streamData(ResultSet rs) throws SQLException, IOException {
-                        InputStream is = lobHandler.getBlobAsBinaryStream(rs, 1);
-                        if (is != null) {
-                            FileCopyUtils.copy(is, outputStream);
-                        }
-                    }
-                }
-        );
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public void streamImageThumbnail(final int id, final OutputStream outputStream) {
-        getJdbcTemplate().query(
-                "select content_desktop_thumbnail from image where id = ?",
-                new Object[]{id},
-                new AbstractLobStreamingResultSetExtractor() {
-                    @Override
-                    protected void handleNoRowFound() throws LobRetrievalFailureException {
-                        throw new EmptyResultDataAccessException(
-                                "Desktop thumbnail image with id '" + id + "' not found in database", 1);
+                                "Image with id '" + id + "' not found in database", 1);
                     }
 
                     @Override
