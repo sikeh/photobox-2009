@@ -14,7 +14,7 @@
   </component>
   <component name="com.intellij.j2meplugin.module.settings.midp.MIDPSettings">
     <setting name="MIDlet-1" module.settings.user.defined.value="photoboxme.PhotoBoxMidlet,,photoboxme.PhotoBoxMidlet" />
-    <setting name="MIDlet-Jar-Size" module.settings.user.defined.value="375061" />
+    <setting name="MIDlet-Jar-Size" module.settings.user.defined.value="404776" />
     <setting name="MIDlet-Jar-URL" module.settings.user.defined.value="photoboxme.jar" />
     <setting name="MIDlet-Name" module.settings.user.defined.value="photoboxme" />
     <setting name="MIDlet-Vendor" module.settings.user.defined.value="My Vendor" />

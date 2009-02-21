@@ -76,7 +76,7 @@
       <file leaf-file-name="HomeForm.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/photoboxme/ui/HomeForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="102" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.32409012">
+            <state line="65" column="56" selection-start="2039" selection-end="2039" vertical-scroll-proportion="1.5573771">
               <folding />
             </state>
           </provider>
@@ -326,15 +326,15 @@
     </navigator>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="JDKs" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="RunManagerConfig.showSettingsBeforeRunnig" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
@@ -524,7 +524,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
@@ -541,7 +541,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979724" sideWeight="0.65967745" order="0" side_tool="false" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979724" sideWeight="0.65967745" order="0" side_tool="false" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" />
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" />
@@ -635,9 +635,7 @@
     <entry file="file://$PROJECT_DIR$/src/photoboxme/ui/SnapshotForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="13" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -658,18 +656,14 @@
     <entry file="file://$PROJECT_DIR$/src/photoboxme/task/SnapshotTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="90" column="53" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/photoboxme/util/HttpMultipartUploader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="13" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -683,9 +677,7 @@
     <entry file="file://$PROJECT_DIR$/src/photoboxme/ui/UploadForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="57" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -698,7 +690,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/photoboxme/ui/HomeForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="102" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.32409012">
+        <state line="65" column="56" selection-start="2039" selection-end="2039" vertical-scroll-proportion="1.5573771">
           <folding />
         </state>
       </provider>
