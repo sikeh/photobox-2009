@@ -13,20 +13,19 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>PhotoBox Mobile</title>
+    <title>PhotoBox Desktop</title>
 </head>
 <body>
 <div class="main">
-    <c:forEach items="${images}" var="image">
-        <div class="photo">
-            <p>
-                <c:out value="${image.id}"/><br/>
-                <a href="./image.mobi?id=${image.id}"><img src="./imageThumbnailContent.mobi?id=${image.id}" alt="photo"
-                                                         border="0"/></a><br/>
-                <c:out value="${image.description}"/>
-            </p>
-        </div>
-    </c:forEach>
+    <%--varStatus="rowCounter"--%>
+    <div class="photo">
+        <p>
+            <c:out value="${image.id}"/><br/>
+            <img src="./imageContent.mobi?id=${image.id}" alt="photo" border="0"/><br/>
+            <c:out value="${image.description}"/><br/>
+            <c:out value="${image.timestamp}"/>
+        </p>
+    </div>
 </div>
 
 </body>

@@ -17,9 +17,7 @@ public interface ImageDatabase {
 
     ImageDescriptor getImage(int id);
 
-    void streamImage(int id, OutputStream outputStream);
-
-    void streamImageThumbnail(int id, OutputStream outputStream);
+    void streamImage(int id, OutputStream outputStream, DbColumns dbColumn);
 
     void storeImage(InputStream inputStream, int contentLength, String description) throws IOException;
 
