@@ -30,6 +30,12 @@ public class ImageController {
         return "imageList";
     }
 
+    @RequestMapping("/image.do")
+    public String showImage(int id, Model model) {
+        model.addAttribute("image", imageDatabase.getImage(id));
+        return "image";
+    }
+
     @RequestMapping("/imageUpload.do")
     public String processImageUpload(@RequestParam("image") MultipartFile image, String description) throws IOException {
         imageDatabase.storeImage(image.getInputStream(), (int) image.getSize(), description);

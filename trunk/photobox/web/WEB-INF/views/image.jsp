@@ -17,16 +17,15 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 </head>
 <body>
 <div class="main">
-     <%--varStatus="rowCounter"--%>
-    <c:forEach items="${images}" var="image">
-        <div class="photo">
-            <p>
-                <c:out value="${image.id}"/><br/>
-                <a href="./image.do?id=${image.id}"><img src="./imageThumbnailContent.do?id=${image.id}" alt="photo" border="0"/></a><br/>
-                <c:out value="${image.description}"/>
-            </p>
-        </div>
-    </c:forEach>
+    <%--varStatus="rowCounter"--%>
+    <div class="photo">
+        <p>
+            <c:out value="${image.id}"/><br/>
+            <img src="./imageContent.do?id=${image.id}" alt="photo" border="0"/><br/>
+            <c:out value="${image.description}"/><br/>
+            <c:out value="${image.timestamp}"/>
+        </p>
+    </div>
 </div>
 
 </body>
