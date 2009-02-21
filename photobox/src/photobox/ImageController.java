@@ -47,9 +47,19 @@ public class ImageController {
         imageDatabase.streamImage(id, outputStream, DbColumns.DESKTOP);
     }
 
+    @RequestMapping("/imageContent_m.do")
+    public void streamMobileImageContent(int id, OutputStream outputStream) {
+        imageDatabase.streamImage(id, outputStream, DbColumns.MOBILE);
+    }
+
     @RequestMapping("/imageThumbnailContent.do")
     public void streamImageThumbnailContent(int id, OutputStream outputStream) {
         imageDatabase.streamImage(id, outputStream, DbColumns.DESKTOP_THUMBNAIL);
+    }
+
+    @RequestMapping("/imageThumbnailContent_m.do")
+    public void streamMobileImageThumbnailContent(int id, OutputStream outputStream) {
+        imageDatabase.streamImage(id, outputStream, DbColumns.MOBILE_THUMBNAIL);
     }
 
     @RequestMapping("/clearDatabase.do")

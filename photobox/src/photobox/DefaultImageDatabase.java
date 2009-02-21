@@ -6,6 +6,8 @@ import org.springframework.jdbc.core.support.AbstractLobCreatingPreparedStatemen
 import org.springframework.jdbc.core.support.AbstractLobStreamingResultSetExtractor;
 import org.springframework.jdbc.support.lob.LobHandler;
 import org.springframework.jdbc.support.lob.LobCreator;
+import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.LobRetrievalFailureException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
