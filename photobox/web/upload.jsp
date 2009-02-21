@@ -12,10 +12,10 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Upload a file please</title>
+    <title>Upload a Image</title>
 </head>
 <body>
-<h1>Please upload a file</h1>
+<h1>Please upload a image</h1>
 
 <form method="post" action="./imageUpload.do" enctype="multipart/form-data">
     <input type="file" name="image"/>
