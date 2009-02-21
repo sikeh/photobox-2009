@@ -15,6 +15,8 @@ import java.io.IOException;
 public interface ImageDatabase {
     List<ImageDescriptor> getImages();
 
+    ImageDescriptor getImage(int id);
+
     void streamImage(int id, OutputStream outputStream);
 
     void streamImageThumbnail(int id, OutputStream outputStream);
