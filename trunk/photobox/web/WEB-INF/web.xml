@@ -13,6 +13,11 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     <servlet>
+      <servlet-name>init</servlet-name>
+      <servlet-class>net.sourceforge.wurfl.wurflapi.WurflServletInit</servlet-class>
+      <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
@@ -20,14 +25,5 @@
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>mobile_dispatcher</servlet-name>
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>mobile_dispatcher</servlet-name>
-        <url-pattern>*.mobi</url-pattern>
     </servlet-mapping>
 </web-app>
