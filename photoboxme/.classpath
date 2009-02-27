@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="res"/>
+	<classpathentry kind="con" path="org.elipse.mtj.JavaMEContainer/Sun Java(TM) Wireless Toolkit 2.5.2_01 for CLDC/DefaultColorPhone"/>
+	<classpathentry exported="true" kind="lib" path="C:/lib/LWUIT_20081222/lib/LWUIT.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/lib/LWUIT_20081222/docs/javadocs.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

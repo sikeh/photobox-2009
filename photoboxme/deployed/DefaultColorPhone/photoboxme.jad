@@ -1,0 +1,8 @@
+MIDlet-1: PhotoBox ME,,photoboxme.PhotoBoxMidlet
+MIDlet-Jar-Size: 132246
+MIDlet-Jar-URL: photoboxme.jar
+MIDlet-Name: PhotoBox ME
+MIDlet-Vendor: Sike Huang, KTH
+MIDlet-Version: 1.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-1.0
