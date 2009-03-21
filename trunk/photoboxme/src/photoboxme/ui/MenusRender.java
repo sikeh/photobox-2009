@@ -8,6 +8,12 @@ import com.sun.lwuit.List;
 import com.sun.lwuit.layouts.BoxLayout;
 import com.sun.lwuit.list.ListCellRenderer;
 
+/**
+ * Render for the list in the {@link HomeForm}, "fish eye" effect.
+ * 
+ * @author Sike Huang
+ * 
+ */
 public class MenusRender extends Label implements ListCellRenderer {
 	private Label lblItem = new Label("");
 	private Label lblTip = new Label("");
@@ -39,7 +45,7 @@ public class MenusRender extends Label implements ListCellRenderer {
 			lblTip.setText(menuTips[index]);
 			return selected;
 		}
-		
+
 		setIcon(images[index]);
 		setText(text);
 		getStyle().setBgTransparency(0);

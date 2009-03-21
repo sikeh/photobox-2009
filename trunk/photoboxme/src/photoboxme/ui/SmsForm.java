@@ -14,8 +14,10 @@ import java.io.IOException;
 import photoboxme.util.Config;
 
 /**
- * Created by IntelliJ IDEA. User: Sike Huang Date: Feb 22, 2009 Time: 11:03:23
- * PM To change this template use File | Settings | File Templates.
+ * Screen for sending SMS. WMA is used.
+ * 
+ * @author Sike Huang
+ * 
  */
 public class SmsForm extends TemplateForm {
 	private Label lblPhotoId;
@@ -88,7 +90,7 @@ public class SmsForm extends TemplateForm {
 				mc.close();
 			} catch (IOException e) {
 				e.printStackTrace(); // To change body of catch statement use
-										// File | Settings | File Templates.
+				// File | Settings | File Templates.
 			}
 
 		}

@@ -17,8 +17,10 @@ import com.sun.lwuit.list.DefaultListModel;
 import com.sun.lwuit.util.Resources;
 
 /**
- * Created by IntelliJ IDEA. User: Sike Huang Date: Feb 20, 2009 Time: 9:31:28
- * PM To change this template use File | Settings | File Templates.
+ * The home screen holds a list of actions to be performed.
+ * 
+ * @author Sike Huang
+ * 
  */
 public class HomeForm extends TemplateForm {
 	private MIDlet miDlet;
@@ -26,8 +28,9 @@ public class HomeForm extends TemplateForm {
 	private Command cmdExit;
 	private final static String[] MENU_ITEMS = { "Snapshot", "SMS", "Browser",
 			"Setting" };
-	private final static String[] MENU_TIPS = { "take a snapshot and upload", "send sms to friends", "visit photobox website",
-	"change photobox url" };
+	private final static String[] MENU_TIPS = { "take a snapshot and upload",
+			"send sms to friends", "visit photobox website",
+			"change photobox url" };
 
 	public HomeForm(MIDlet miDlet) {
 		this.miDlet = miDlet;

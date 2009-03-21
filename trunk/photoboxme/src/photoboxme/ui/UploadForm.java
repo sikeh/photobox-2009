@@ -10,8 +10,10 @@ import photoboxme.task.BackgroundTask;
 import photoboxme.task.UploadTask;
 
 /**
- * Created by IntelliJ IDEA. User: Sike Huang Date: Feb 20, 2009 Time: 10:40:48
- * PM To change this template use File | Settings | File Templates.
+ * Screen for uploading the image.
+ * 
+ * @author Sike Huang
+ * 
  */
 public class UploadForm extends TemplateForm {
 	private TemplateForm homeForm;

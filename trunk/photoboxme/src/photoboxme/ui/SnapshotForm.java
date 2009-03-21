@@ -15,8 +15,10 @@ import photoboxme.task.SnapshotTask;
 import photoboxme.task.BackgroundTask;
 
 /**
- * Created by IntelliJ IDEA. User: Sike Huang Date: Feb 20, 2009 Time: 10:00:01
- * PM To change this template use File | Settings | File Templates.
+ * Screen for taking snapshot. MMAPI is used.
+ * 
+ * @author Sike Huang
+ * 
  */
 public class SnapshotForm extends TemplateForm {
 	private TemplateForm homeForm;

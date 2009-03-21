@@ -11,8 +11,11 @@ import com.sun.lwuit.Dialog;
 import com.sun.lwuit.Label;
 
 /**
- * Created by IntelliJ IDEA. User: Sike Huang Date: Feb 20, 2009 Time: 10:36:07
- * PM To change this template use File | Settings | File Templates.
+ * Background task for taking a snapshot. Upon finishing the bytes of the
+ * resulting image will be passed into {@link UploadForm} and shown.
+ * 
+ * @author Sike Huang
+ * 
  */
 public class SnapshotTask extends BackgroundTask {
 
@@ -24,9 +27,7 @@ public class SnapshotTask extends BackgroundTask {
 	private byte[] data;
 
 	/**
-	 * Create a background task to take a snapshot, upon finishing the created
-	 * image will be encapsulated into an {@code Attachment} object, this object
-	 * will be added into the existing {@code Vector} of {@code Attachment}s.
+	 * Construct the task.
 	 * 
 	 * @param homeForm
 	 *            the form to be shown once task finished
@@ -44,7 +45,8 @@ public class SnapshotTask extends BackgroundTask {
 	}
 
 	/**
-	 * Pop a modeless {@code Dialog} to indicate in process before downloading.
+	 * Pop a modeless {@code Dialog} to indicate in process before doing
+	 * snapshot.
 	 */
 	public void taskStarted() {
 		dialog = new Dialog("Progress");
@@ -53,8 +55,8 @@ public class SnapshotTask extends BackgroundTask {
 	}
 
 	/**
-	 * Dispose the modeless {@code Dialog} popped once download completes, and
-	 * show the form passed in via constructor.
+	 * Dispose the modeless {@code Dialog} popped once snapshot completes, and
+	 * show {@link UploadForm}.
 	 */
 	public void taskFinished() {
 		dialog.dispose();
@@ -63,12 +65,7 @@ public class SnapshotTask extends BackgroundTask {
 	}
 
 	/**
-	 * <p>
 	 * Actual process of snapshot.
-	 * <p>
-	 * The resulting bytes will be encapsulated into a {@code Attachment} and
-	 * added to existing the collection of attachments, meanwhile the resource
-	 * is released here.
 	 */
 	public void performTask() {
 		try {
