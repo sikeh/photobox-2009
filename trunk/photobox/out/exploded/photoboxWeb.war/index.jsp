@@ -1,27 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Sike Huang
-  Date: Feb 7, 2009
-  Time: 12:28:21 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <title>Upload a file please</title>
-</head>
-<body>
-<h1>Please upload a file</h1>
+<%@ taglib uri="/WEB-INF/tld/wall.tld" prefix="wall" %>
+<wall:document><wall:xmlpidtd/>
+    <wall:head>
+        <wall:title>Welcome to PhotoBox</wall:title>
+        <wall:menu_css/>
+    </wall:head>
 
-<form method="post" action="./imageUpload.do" enctype="multipart/form-data">
-    <input type="file" name="image"/>
-    <textarea name="description" rows="20" cols="20">some text</textarea>
-    <input type="submit"/>
-</form>
-
-</body>
-</html>
+    <wall:body>
+        <wall:block>
+            <wall:img src="./photobox.jpg" alt="Logo"/><wall:br/>
+            <wall:b>Welcome to PhotoBox</wall:b>
+        </wall:block>
+        <wall:menu colorize="true" autonumber="true">
+            <wall:a href="./imageList.do" title="Photos">List of Photos</wall:a>
+        </wall:menu>
+        <wall:form action="./image.do" method="get" enable_wml="true">
+            Photo ID:
+            <wall:input type="text" name="id" size="8" maxlength="4" value="" format="4N"/>
+            <wall:input type="submit" value="Go"/>
+        </wall:form>
+    </wall:body>
+</wall:document>

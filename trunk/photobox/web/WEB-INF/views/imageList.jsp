@@ -5,7 +5,7 @@
 
     <wall:head>
         <wall:title>List of Photos</wall:title>
-
+        <wall:menu_css/>
         <c:set var="gridsize" value="1"/>
         <c:if test="${capabilities.resolution_width >= 160}">
             <c:set var="gridsize" value="2"/>
@@ -15,7 +15,6 @@
 
     <wall:body>
         <wall:cool_menu colnum="${gridsize}">
-            <%--varStatus="rowCounter"--%>
             <c:forEach items="${images}" var="image">
                 <wall:cell>
                     <c:out value="${image.id}"/><wall:br/>
@@ -32,6 +31,9 @@
                 </wall:cell>
             </c:forEach>
         </wall:cool_menu>
-
+        <wall:hr/>
+        <wall:menu colorize="true" autonumber="true">
+            <wall:a href="./" title="Home">Home</wall:a>
+        </wall:menu>
     </wall:body>
 </wall:document>

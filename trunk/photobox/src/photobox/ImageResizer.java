@@ -11,26 +11,52 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 
 /**
- * Created by IntelliJ IDEA.
- * User: Sike Huang
- * Date: Feb 15, 2009
- * Time: 11:34:44 PM
- * To change this template use File | Settings | File Templates.
+ * Hold Util methods for resizing image.
+ *
+ * @Sike Huang
  */
 public class ImageResizer {
 
+    /**
+     * Resize the image to desktop size.
+     *
+     * @param orginalData orig bytes of the image
+     * @return bytes of resized image
+     * @throws IOException failed in resizing
+     */
     public static byte[] resizeToDesktop(byte[] orginalData) throws IOException {
         return resize(orginalData, ImageSizes.DESKTOP.getLimit());
     }
 
+    /**
+     * Resize the image to desktop thumbnail size.
+     *
+     * @param orginalData orig bytes of the image
+     * @return bytes of resized iamge
+     * @throws IOException failed in resizing
+     */
     public static byte[] resizeToDesktopThumbnail(byte[] orginalData) throws IOException {
         return resize(orginalData, ImageSizes.DESKTOP_THUMBNAIL.getLimit());
     }
 
+    /**
+     * Resize the image to mobile size.
+     *
+     * @param orginalData orig bytes of the image
+     * @return bytes of resized iamge
+     * @throws IOException failed in resizing
+     */
     public static byte[] resizeToMobile(byte[] orginalData) throws IOException {
         return resize(orginalData, ImageSizes.MOBILE.getLimit());
     }
 
+    /**
+     * Resize the image to mobile thumbnail size.
+     *
+     * @param orginalData orig bytes of the image
+     * @return bytes of resized iamge
+     * @throws IOException failed in resizing
+     */
     public static byte[] resizeToMobileThumbnail(byte[] orginalData) throws IOException {
         return resize(orginalData, ImageSizes.MOBILE_THUMBNAIL.getLimit());
     }
