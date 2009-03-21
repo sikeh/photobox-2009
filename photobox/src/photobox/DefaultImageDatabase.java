@@ -25,19 +25,23 @@ import java.sql.PreparedStatement;
 import java.sql.Timestamp;
 
 /**
- * Created by IntelliJ IDEA.
- * User: Sike Huang
- * Date: Feb 15, 2009
- * Time: 4:45:50 PM
- * To change this template use File | Settings | File Templates.
+ * Default implementatin of {@link ImageDatabase}, with help from {@link SimpleJdbcDaoSupport}.
  */
 public class DefaultImageDatabase extends SimpleJdbcDaoSupport implements ImageDatabase {
     private LobHandler lobHandler;
 
+    /**
+     * Inject handler for blob.
+     *
+     * @param lobHandler handler for blob
+     */
     public void setLobHandler(LobHandler lobHandler) {
         this.lobHandler = lobHandler;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     @Transactional(readOnly = true)
     public List<ImageDescriptor> getImages() {
@@ -53,6 +57,9 @@ public class DefaultImageDatabase extends SimpleJdbcDaoSupport implements ImageD
         });
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     @Transactional(readOnly = true)
     public ImageDescriptor getImage(int id) {
@@ -68,6 +75,9 @@ public class DefaultImageDatabase extends SimpleJdbcDaoSupport implements ImageD
         }, new Object[]{id});
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     @Transactional(readOnly = true)
     public void streamImage(final int id, final OutputStream outputStream, DbColumns dbColumn) {
@@ -97,6 +107,9 @@ public class DefaultImageDatabase extends SimpleJdbcDaoSupport implements ImageD
         );
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     @Transactional
     public void storeImage(final InputStream inputStream, final int contentLength, final String description) throws IOException {
@@ -121,6 +134,9 @@ public class DefaultImageDatabase extends SimpleJdbcDaoSupport implements ImageD
                 });
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     @Transactional
     public void clearDatabase() {

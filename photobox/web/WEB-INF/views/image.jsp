@@ -5,6 +5,7 @@
 
     <wall:head>
         <wall:title>Photo #${image.id}</wall:title>
+        <wall:menu_css/>
     </wall:head>
     <wall:body>
         <wall:block>
@@ -21,5 +22,10 @@
             <c:out value="${image.description}"/><wall:br/>
             <c:out value="${image.timestamp}"/>
         </wall:block>
+        <wall:hr/>
+        <wall:menu colorize="true" autonumber="true">
+            <wall:a href="./" title="Home">Home</wall:a>
+            <wall:a href="./imageList.do" title="Photos">List of Photos</wall:a>
+        </wall:menu>
     </wall:body>
 </wall:document>

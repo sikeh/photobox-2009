@@ -12,7 +12,7 @@
         <building>
           <setting name="EXPLODED_URL" value="file://$MODULE_DIR$/out/exploded/photoboxWeb.war" />
           <setting name="EXPLODED_ENABLED" value="true" />
-          <setting name="JAR_URL" value="file://$MODULE_DIR$/out/Web.war" />
+          <setting name="JAR_URL" value="file://$MODULE_DIR$/out/photobox.war" />
           <setting name="JAR_ENABLED" value="true" />
           <setting name="EXCLUDE_EXPLODED_DIRECTORY" value="true" />
         </building>
@@ -38,6 +38,10 @@
             <attribute name="URI" value="/WEB-INF/lib" />
           </containerElement>
           <containerElement type="library" name="mysql" level="project">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
+          <containerElement type="library" name="wurfl" level="project">
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib" />
           </containerElement>
@@ -69,6 +73,7 @@
     <orderEntry type="library" name="jstl" level="project" />
     <orderEntry type="library" name="c3p0" level="project" />
     <orderEntry type="library" name="mysql" level="project" />
+    <orderEntry type="library" name="wurfl" level="project" />
   </component>
 </module>
 

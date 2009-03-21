@@ -215,7 +215,7 @@
   </component>
   <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectKey">
-    <option name="state" value="project://C:\Users\Sike Huang\IdeaProjects\photobox\photobox.ipr" />
+    <option name="state" value="https://photobox-2009.googlecode.com/svn/trunk/photobox/photobox.ipr" />
   </component>
   <component name="ProjectModuleManager">
     <modules>
@@ -241,9 +241,10 @@
   </component>
   <component name="SvnBranchConfigurationManager">
     <option name="myVersion" value="124" />
+    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="" vcs="svn" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">
@@ -253,7 +254,9 @@
         <root url="jar://$PROJECT_DIR$/lib/commons-logging.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/spring-webmvc.jar!/" />
       </CLASSES>
-      <JAVADOC />
+      <JAVADOC>
+        <root url="file://C:/lib/spring-framework-2.5.6/docs/api" />
+      </JAVADOC>
       <SOURCES />
     </library>
     <library name="commons">
@@ -282,6 +285,14 @@
     <library name="mysql">
       <CLASSES>
         <root url="jar://C:/lib/mysql-connector-java-5.1.7/mysql-connector-java-5.1.7-bin.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="wurfl">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/xom-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/wurfltags.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
