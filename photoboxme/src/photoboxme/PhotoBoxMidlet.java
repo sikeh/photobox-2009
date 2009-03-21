@@ -13,8 +13,10 @@ import com.sun.lwuit.plaf.UIManager;
 import com.sun.lwuit.util.Resources;
 
 /**
- * Created by IntelliJ IDEA. User: Sike Huang Date: Feb 20, 2009 Time: 9:30:21
- * PM To change this template use File | Settings | File Templates.
+ * Entry point, perform resource loading and apply theme.
+ * 
+ * @author Sike Huang
+ *
  */
 public class PhotoBoxMidlet extends MIDlet {
 	protected void startApp() throws MIDletStateChangeException {

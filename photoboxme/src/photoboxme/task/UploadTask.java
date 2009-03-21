@@ -14,8 +14,10 @@ import com.sun.lwuit.Dialog;
 import com.sun.lwuit.Label;
 
 /**
- * Created by IntelliJ IDEA. User: Sike Huang Date: Feb 20, 2009 Time: 10:36:07
- * PM To change this template use File | Settings | File Templates.
+ * Background task for uploading the image.
+ * 
+ * @author Sike Huang
+ * 
  */
 public class UploadTask extends BackgroundTask {
 	private TemplateForm menuForm;
@@ -31,7 +33,7 @@ public class UploadTask extends BackgroundTask {
 	}
 
 	/**
-	 * Pop a modeless {@code Dialog} to indicate in process before downloading.
+	 * Pop a modeless {@code Dialog} to indicate in process before uploading.
 	 */
 	public void taskStarted() {
 		dialog = new Dialog("Progress");
@@ -40,8 +42,8 @@ public class UploadTask extends BackgroundTask {
 	}
 
 	/**
-	 * Dispose the modeless {@code Dialog} popped once download completes, and
-	 * show the form passed in via constructor.
+	 * Dispose the modeless {@code Dialog} popped once uploading completes, and
+	 * navigate back to {@link HomeForm}.
 	 */
 	public void taskFinished() {
 		dialog.dispose();
@@ -54,18 +56,13 @@ public class UploadTask extends BackgroundTask {
 				((HomeForm) menuForm).getMidlet().platformRequest(webUrl);
 			} catch (ConnectionNotFoundException e) {
 				e.printStackTrace(); // To change body of catch statement use
-										// File | Settings | File Templates.
+				// File | Settings | File Templates.
 			}
 		}
 	}
 
 	/**
-	 * <p>
-	 * Actual process of snapshot.
-	 * <p>
-	 * The resulting bytes will be encapsulated into a {@code Attachment} and
-	 * added to existing the collection of attachments, meanwhile the resource
-	 * is released here.
+	 * Actual process of uploading an image using HTTP Multipart POST.
 	 */
 	public void performTask() {
 		String uploaderUrl = Config.getInstance().getUploaderUrl();
@@ -77,7 +74,7 @@ public class UploadTask extends BackgroundTask {
 			uploader.send();
 		} catch (IOException e) {
 			e.printStackTrace(); // To change body of catch statement use File |
-									// Settings | File Templates.
+			// Settings | File Templates.
 		}
 	}
 }

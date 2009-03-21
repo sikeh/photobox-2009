@@ -4,8 +4,11 @@ import com.sun.lwuit.events.ActionListener;
 import com.sun.lwuit.Form;
 
 /**
- * Created by IntelliJ IDEA. User: Sike Huang Date: Feb 20, 2009 Time: 9:26:44
- * PM To change this template use File | Settings | File Templates.
+ * Template for constructing forms. A form is a concept in LWUIT, which is
+ * screen.
+ * 
+ * @author Sike Huang
+ * 
  */
 public abstract class TemplateForm extends Form implements ActionListener {
 	private TemplateForm previsousForm;
@@ -14,18 +17,39 @@ public abstract class TemplateForm extends Form implements ActionListener {
 
 	}
 
+	/**
+	 * Constructor where previous form is injected.
+	 * 
+	 * @param previsousForm
+	 *            previous form
+	 */
 	protected TemplateForm(TemplateForm previsousForm) {
 		this.previsousForm = previsousForm;
 	}
 
+	/**
+	 * Build GUI components in the form.
+	 */
 	protected abstract void buildComponents();
 
+	/**
+	 * Attach listeners to the components.
+	 */
 	protected abstract void attachComponentListeners();
 
+	/**
+	 * Build soft buttons.
+	 */
 	protected abstract void buildSoftButtons();
 
+	/**
+	 * Set data model.
+	 */
 	protected abstract void setModel();
 
+	/**
+	 * Build the form and show it.
+	 */
 	public void handle() {
 		buildComponents();
 		attachComponentListeners();
@@ -34,6 +58,9 @@ public abstract class TemplateForm extends Form implements ActionListener {
 		show();
 	}
 
+	/**
+	 * Navigate back to previous form.
+	 */
 	protected void goBack() {
 		previsousForm.show();
 	}

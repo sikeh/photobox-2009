@@ -10,8 +10,10 @@ import com.sun.lwuit.layouts.BoxLayout;
 import photoboxme.util.Config;
 
 /**
- * Created by IntelliJ IDEA. User: Sike Huang Date: Feb 22, 2009 Time: 10:33:57
- * PM To change this template use File | Settings | File Templates.
+ * Screen for changing settings, where url of the PhotoBox Web can be changed and stored.
+ * 
+ * @author Sike Huang
+ * 
  */
 public class SettingForm extends TemplateForm {
 	private Label label;
